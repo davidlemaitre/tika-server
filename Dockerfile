@@ -16,6 +16,7 @@ RUN	apk add --no-cache \
 	&& echo "Nearest mirror: $NEAREST_TIKA_SERVER_URL" \
 	&& curl -sSL "$NEAREST_TIKA_SERVER_URL" -o /tika-server-${TIKA_VERSION}.jar \
 	&& gpg --verify /tmp/tika-server-${TIKA_VERSION}.jar.asc /tika-server-${TIKA_VERSION}.jar \
+    && apk del curl gnupg \
 	&& rm -rf /tmp/* /var/tmp/*
 
 EXPOSE 9998
