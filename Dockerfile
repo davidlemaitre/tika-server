@@ -4,7 +4,7 @@ LABEL maintainer="David Lemaitre"
 ENV TIKA_VERSION 1.16
 ENV TIKA_SERVER_URL https://www.apache.org/dist/tika/tika-server-$TIKA_VERSION.jar
 
-RUN	apk add --no-cache \
+RUN apk add --no-cache \
     curl \
     gnupg \
     && curl -sSL https://people.apache.org/keys/group/tika.asc -o /tmp/tika.asc \
