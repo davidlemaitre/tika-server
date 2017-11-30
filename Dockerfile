@@ -4,11 +4,8 @@ LABEL maintainer="David Lemaitre"
 ENV TIKA_VERSION 1.16
 ENV TIKA_SERVER_URL https://www.apache.org/dist/tika/tika-server-$TIKA_VERSION.jar
 
-# tesseract is in testing repo
-RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
-
 RUN	apk add --no-cache \
-	curl gdal tesseract-ocr \
+	curl \
 	gnupg \
 	&& curl -sSL https://people.apache.org/keys/group/tika.asc -o /tmp/tika.asc \
 	&& gpg --import /tmp/tika.asc \
