@@ -1,4 +1,4 @@
-FROM openjdk:8u151-jdk-alpine
+FROM openjdk:8u212-jdk-alpine3.9
 LABEL maintainer="David Lemaitre"
 
 ENV TIKA_VERSION 1.16
