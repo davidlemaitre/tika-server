@@ -1,7 +1,7 @@
 FROM openjdk:8u212-jdk-alpine3.9
 LABEL maintainer="David Lemaitre"
 
-ENV TIKA_VERSION 1.16
+ENV TIKA_VERSION 1.24.1
 ENV TIKA_SERVER_URL https://archive.apache.org/dist/tika/tika-server-$TIKA_VERSION.jar
 
 RUN apk add --no-cache \
